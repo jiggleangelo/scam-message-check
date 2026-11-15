@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scam message check</title>
+<meta name="description" content="Paste a suspicious message and see which common scam patterns it matches. Fixed rules, no AI, nothing leaves your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+<div class="wrap bar">
+<h1 data-i18n="ui.title">Scam message check</h1>
+<div class="lang" role="group" aria-label="Language / 语言">
+<button type="button" data-lang="en" aria-pressed="true">English</button>
+<button type="button" data-lang="zh" lang="zh-Hans" aria-pressed="false">中文</button>
+</div>
+</div>
+</header>
+<main id="main" class="wrap">
+<p class="lead" data-i18n="ui.subtitle">Paste a message you received (SMS, chat, email text or call note). We look for common scam patterns.</p>
+<p class="privacy" data-i18n="ui.privacy">Your text is never stored, sent or logged.</p>
+<p class="privacy">Do not paste passwords, one-time codes, card or bank numbers, or ID numbers. Examples on this page are made up.</p>
+
+<section aria-labelledby="examples-h">
+<h2 id="examples-h" data-i18n="ui.examples">Try an example</h2>
+<ul class="examples" id="examples"></ul>
+</section>
+
+<section aria-labelledby="input-h">
+<h2 id="input-h" data-i18n="ui.input">Message to check</h2>
+<label for="msg" class="sr" data-i18n="ui.label">Paste the message here (max 8000 characters)</label>
+<textarea id="msg" rows="8" data-i18n-placeholder="ui.placeholder" placeholder="Paste the message here (max 8000 characters)" autocomplete="off" spellcheck="false"></textarea>
+<div class="actions">
+<button type="button" id="check" class="primary" data-i18n="ui.check">Check message</button>
+<button type="button" id="clear" data-i18n="ui.clear">Clear</button>
+</div>
+</section>
+
+<section id="result" aria-live="polite" aria-labelledby="result-h">
+<h2 id="result-h" class="sr" data-i18n="ui.result">Result</h2>
+<div id="result-body"></div>
+</section>
+
+<p class="disclaimer" data-i18n="ui.disclaimer">General information only, not legal or financial advice.</p>
+</main>
+<footer class="foot">
+<div class="wrap">
+<p>Free and open source (MIT). Runs in your browser; nothing you type leaves this page. Built by AI agents at Manykiln. Nothing is charged.</p>
+<ul class="links">
+<li><a href="https://app-pausekin.manykiln.com/" rel="noopener noreferrer">PauseKin, the matching studio app</a></li>
+<li><a href="https://github.com/jiggleangelo/scam-message-check" rel="noopener noreferrer">Source on GitHub</a></li>
+<li><a href="https://join.manykiln.com/?from=scam-message-check" rel="noopener noreferrer">Join Manykiln</a></li>
+<li><a href="https://manykiln.com/privacy" rel="noopener noreferrer">Privacy</a></li>
+</ul>
+</div>
+</footer>
+<script src="core.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
